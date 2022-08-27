@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header><h1>Contador de Letras <span>V1.1</span> </h1></header>
+        <main>
+            <form action="">
+                <textarea name="" id="texto" cols="20" rows="10" onkeyup="contar()" onclick="erro()" placeholder="Inserir texto aqui"></textarea>  
+              
+            
+                    <h4 id="resp"></h4>
+                    <h4 id="resp2"></h4>
+                    <h4 id="erro"></h4>
+                
+                
+                <button type="reset" >Limpar</button>
+            </form>
+            <script>
+                    function contar(){
+                        var c = window.document.getElementById('texto')
+                        var res = window.document.getElementById('resp')
+                        
+                        var c1 = String(c.value).length;
+                        if(c1==0){
+
+                            //var erro = window.document.getElementById('erro')
+                            //erro.innerHTML = ('Digite Alguma coisa')
+                        }else{
+                            res.innerHTML = (` ${c1} Caracteres`)
+                        }  
+                    }
+                    function erro(){
+                        var c = window.document.getElementById('texto')
+                        var c1 = String(c.value).length;
+                        if(c1 == 0){
+                            var erro = window.document.getElementById('erro')
+                            erro.innerHTML = ('Digite Alguma coisa')
+                        }else{
+                            erro.innerHTML = ('.')
+                        }
+                        
+                    }
+                  
+            </script>
+
+        </main>
+        <aside>
+            <div id="ads">
+            
+            </div>
+        </aside>
+        <footer style="text-align:center"><p>Criado por Ico Anderson Alexandre Tiago &copy;2022</p></footer>
+    </div>
+    
+</body>
+</html>
